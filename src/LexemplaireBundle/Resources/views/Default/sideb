@@ -1,0 +1,23 @@
+<ul class="list-group">
+    <a href="#" class="list-group-item active">
+      <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+        Creer un Dossier <span class="glyphicon glyphicon-file">
+    </a>
+    <a href="#" class="list-group-item">
+      <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+
+        Consulter Dossier Soins <span class="glyphicon glyphicon-search">
+    </a>
+    <a href="#" class="list-group-item">
+      <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+        Executer Un Traitement  <span class="glyphicon glyphicon-dashboard">
+    </a>
+    <a href="#" class="list-group-item">
+      <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+        Consulter Gardes
+    </a>
+    <a href="#" class="list-group-item">
+      <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+        Generer Statistiques
+    </a>
+</ul>

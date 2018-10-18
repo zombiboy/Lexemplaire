@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Article</h1>
+
+    <table class="table table-striped table-dark">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ article.id }}</td>
+            </tr>
+            <tr>
+                <th>Libelle</th>
+                <td>{{ article.libelle }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ article.prix }}</td>
+            </tr>
+            <tr>
+                <th>Stock</th>
+                <td>{{ article.stock }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+            <a class="btn btn-default"href="{{ path('article_index') }}"> Tous les articles</a>
+    </ul>
+{% endblock %}

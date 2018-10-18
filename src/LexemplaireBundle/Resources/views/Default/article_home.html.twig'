@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% use 'LexemplaireBundle:Default:sidebar_Home.html.twig' %}
+
+{% block body %}
+
+<ul id="menu-genres" class="nav nav-list">
+<p><a href="{{ path('commande_new') }}" class="btn btn-primary btn-lg">VENTE</a></p>
+
+ {% for article in articles %}
+    <li><a href="#">{{ article.libelle }} <span class="badge badge-info">{{ article.stock }}</span></a></li>
+ {% endfor %}
+</ul>    
+
+{% endblock %}
+

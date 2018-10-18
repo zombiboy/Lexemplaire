@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <!-- Le styles -->
+        <link href="{{ asset('bundles/loginBacStyle/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href='http://codepen.io/assets/libs/fullpage/jquery-ui.css' rel="stylesheet">
+        <link href="{{ asset('bundles/loginBacStyle/css/bootstrap-responsive.css') }}" rel="stylesheet">
+        
+        {% block stylesheets %}{% endblock %}
+
+      </head>
+    <body>
+        <div class="container-fluid">
+          <div id="minibody" class="row">
+          {% block body %}{% endblock %}
+          </div>
+           
+        </div>
+        {% block javascripts %}
+          <script src="{{ asset('bundles/loginBacStyle/js/jquery-3.2.1.slim.min.js') }}"></script>
+          <script src="{{ asset('bundles/loginBacStyle/js/popper.min.js') }}"></script>
+          <script src="{{ asset('bundles/loginBacStyle/js/bootstrap.min.js') }}"></script>
+          <script src="{{ asset('bundles/loginBacStyle/js/jquery.modal.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,77 @@
+{% extends '::basepdf.html.twig' %}
+
+
+{% block body %} 
+	<div id="hyper" > 
+		<div id="bandeau">
+			<h1> FACTURE</h1>
+			<div id="blocnews"> Merci Pour la Visite</div>
+			<div id="blocnewsLeft">LA TERASSE </div>
+		</div>
+		<div id="contenu">
+			<div> 
+				<div id="tabA" > 
+ 						<table id="maTable2">
+  <thead>
+    <tr>
+      <th>N°TABLE</th>
+      <th>DATE</th>
+      <th>N°COMMANDE</th>
+       
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>		
+				</div> 
+			</div>
+			<br/><br/>
+
+			<div id="tabB"> 
+ 					<table id="maTable2">
+  <thead>
+    <tr>
+      <th>DESIGNATION</th>
+      <th>PRIX UNITAIRE</th>
+      <th>QUANTITE</th>
+      <th>MONTANT</th>
+       
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+      
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>13</td>
+      <td>14</td>
+      <td>15</td>       
+    </tr>
+  </tbody>
+</table>
+			</div> 
+				
+		</div>		
+		<div id="piedpage">
+			Contacts:71 25 92 26 / 76 86 49 60
+		</div>
+	</div>
+
+{% endblock %}

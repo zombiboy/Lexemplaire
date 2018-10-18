@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        <!-- Le styles -->
+          
+        <style>
+ 
+      div 
+      {
+    text-align:center;      
+    }
+
+div#hyper 
+{
+    text-align:center;  
+    border:1px; 
+    border-style:solid;
+    
+}
+
+div#bandeau 
+{ 
+    width:100%; 
+    height:50px; 
+    background-color:white;  
+} 
+
+div#contenu 
+{ 
+    width:100%; 
+    background-color:gainsboro; 
+    float:left;
+}
+
+div#tabA 
+{ 
+    width:70%;
+    float:right;
+}
+
+div#tabB 
+{ 
+    width:100%;
+    background-color:gainsboro; 
+ 
+}
+
+
+
+
+div#piedpage 
+{ 
+    width:100%; 
+    height:50px; 
+    background-color:white;
+    clear:both; 
+    text-align: right;
+}  
+
+div#menu 
+{ 
+    float:left; 
+    width:100px; 
+    height:400px; 
+    background-color:#FF6699; 
+} 
+div#menuhaut 
+{ 
+    width:100px; 
+    height:200px; 
+    background-color:#66CC33;   
+} 
+
+div#menubas 
+{ 
+    width:100px; 
+    height:200px; 
+    background-color:#CC99CC;  
+} 
+div#blocnews { 
+    float:right; 
+    width:200px; 
+    height:100%; 
+    background-color:white;  
+} 
+div#blocnewsLeft { 
+    float:left; 
+    width:200px; 
+    height:100%; 
+    background-color:white;  
+} 
+#maTable2 { 
+  width: 100%;
+  border-collapse: collapse;
+}
+#maTable2 th, #maTable2 td {
+  padding: 3px;
+  border: 1px solid #fff;
+  text-align: center;
+}
+#maTable2 th {
+  background: black;
+  color: white;
+  font-weight: bold;
+}
+    </style>  
+        {% block stylesheets %} {% endblock %} 
+ 
+    </head>
+    <body>
+
+    {% block body %}ici le Blog{% endblock %}
+     
+     
+  
+
+    </body>
+</html>

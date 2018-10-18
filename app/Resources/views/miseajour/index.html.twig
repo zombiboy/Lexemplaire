@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Miseajours list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for miseAJour in miseAJours %}
+            <tr>
+                <td><a href="{{ path('miseajour_show', { 'id': miseAJour.id }) }}">{{ miseAJour.id }}</a></td>
+                <td>{% if miseAJour.date %}{{ miseAJour.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('miseajour_show', { 'id': miseAJour.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('miseajour_edit', { 'id': miseAJour.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('miseajour_new') }}">Create a new miseAJour</a>
+        </li>
+    </ul>
+{% endblock %}

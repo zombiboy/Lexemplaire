@@ -1,0 +1,14 @@
+{% block sidebar %}
+
+<ul id="menu-genres" class="list-group nav ">
+	<a href="#" class="list-group-item active">
+      <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+        ARTICLES 
+    </a>
+	{% for article in articles %}
+    <li><a class="list-group-item href="{{ path('article_show', { 'id': article.id }) }}">{{ article.libelle }} <span class="badge badge-info">{{ article.stock }}</span></a></li>
+ {% endfor %}
+</ul>
+
+{% endblock %}
+

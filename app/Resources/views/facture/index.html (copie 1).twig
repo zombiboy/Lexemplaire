@@ -1,0 +1,129 @@
+{% extends '::basepdf.html.twig' %}
+
+{% block body %}
+     
+ <div id="hyper" > 
+        <div id="bandeau">
+            <h1 id="fact">MERCI DE VOTRE  </br>  FIDELITÉ </br>**LA TERASSE** </h1>
+            <div id="blocnews"> N°cmd: {{ num }}</div>
+            <div id="blocnewsLeft">date: </div>
+        </div>
+        <div id="contenu">
+            <div> 
+                <div id="tabA" >       
+                </div> 
+            </div>
+            <br/><br/>
+
+            <div id="tabB"> 
+                    <table id="maTable2">
+  <thead>
+    <tr>
+      <th>DESIGNATION</th>
+      <th>Qte x PRIX.U</th>
+      <th>MONTANT</th>
+    </tr>
+     <tr>
+           <td>---</td>
+    </tr>
+  </thead>
+  <tbody>
+     
+    {% for facture in factures %}
+            <tr>
+                <td>{{ facture.designation }}</td>
+                <td>{{ facture.quantite }} x {{ facture.prixu }}</td>
+                <td>{{ facture.montant }}</td>
+            </tr>
+    {% endfor %}
+
+    <tr>
+           <td>---</td>
+    </tr>
+     <tr>
+      <td>*** TOTAL ***</td>
+      <td>*** {{fac}} FCFA ***</td>      
+    </tr>
+ 
+  </tbody>
+</table>
+            </div> 
+                
+        </div>      
+        <div id="piedpage">
+            #soutienaufrangin
+            Contacts:71 25 92 26 / 76 86 49 60<br/><br/>
+        </div>
+    </div>
+ 
+
+
+    <div id="hyper" > 
+        <div id="bandeau">
+            <h1> FACTURE</h1>
+            <div id="blocnews"> Merci Pour la Visite</div>
+            <div id="blocnewsLeft">LA TERASSE </div>
+        </div>
+        <div id="contenu">
+            <div> 
+                <div id="tabA" > 
+                        <table id="maTable2">
+  <thead>
+    <tr>
+      <th>N°TABLE</th>
+      <th>DATE</th>
+      <th>N°COMMANDE</th>
+       
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>        
+                </div> 
+            </div>
+            <br/><br/>
+
+            <div id="tabB"> 
+                    <table id="maTable2">
+  <thead>
+    <tr>
+      <th>DESIGNATION</th>
+      <th>QUANTITE</th>
+      <th>PRIX UNITAIRE</th>
+      <th>MONTANT</th>
+       
+    </tr>
+  </thead>
+  <tbody>
+     
+    {% for facture in factures %}
+            <tr>
+                <td>{{ facture.designation }}</td>
+                <td>{{ facture.quantite }}</td>
+                <td>{{ facture.prixu }}</td>
+                <td>{{ facture.montant }}</td>
+            </tr>
+    {% endfor %}
+
+    <tr>
+      <td>TOTAL</td>
+      <td>{{fac}}</td>      
+    </tr>
+ 
+  </tbody>
+</table>
+            </div> 
+                
+        </div>      
+        <div id="piedpage">
+            #soutienaufrangin
+            <br/>
+            Contacts:71 25 92 26 / 76 86 49 60
+        </div>
+    </div> 
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Nouvel article</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form.libelle, { 'attr': {'placeholder': 'libelle'} } ) }}
+        {{ form_widget(form.prix, { 'attr': {'placeholder': 'prix'} } ) }}
+        {{ form_widget(form.stock, { 'attr': {'placeholder': 'quantité'} } ) }}
+         
+
+        <input type="submit" value="VALIDER" class="btn btn-primary" />
+    {{ form_end(form) }}
+
+    <ul>
+        <a href="{{ path('article_index') }}"><input type="button" class="btn btn-default"  value="Tous les articles"/></a>
+    </ul>
+{% endblock %}

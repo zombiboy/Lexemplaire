@@ -1,0 +1,4 @@
+services:
+#    lexemplaire.example:
+#        class: LexemplaireBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

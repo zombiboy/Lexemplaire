@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>ARTICLES</h1>
+
+    <table class="table table-striped table-dark">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Libelle</th>
+                <th scope="col">Prix</th>
+                <th scope="col">Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for article in articles %}
+            <tr>
+                <td>{{ article.libelle }}</td>
+                <td>{{ article.prix }}</td>
+                <td>{{ article.stock }}</td>
+                <td>
+                    <ul>                    
+                            <a class="btn btn-default" href="{{ path('article_show', { 'id': article.id }) }}">voir</a>
+                        
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {% if app.user.roles |join(':') == "ROLE_ADMIN:ROLE_USER" %}
+    {% else %}  
+    {% endif %}
+
+    {% if is_granted('ROLE_ADMIN') %}
+        <ul>
+             <a class="btn btn-primary" href="{{ path('article_new') }}">NOUVEAU</a>
+                  
+                <a class="btn btn-default" href="{{ path('miseajour_new') }}">Mise à jour du stock</a>         
+        </ul>
+    {% else %}  
+            connectez vous pour administrer
+    {% endif %}
+     
+{% endblock %}
+
+{% use 'LexemplaireBundle:Default:sidebar_Home.html.twig' %}

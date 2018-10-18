@@ -1,0 +1,16 @@
+{% extends '::base.html.twig' %}
+{% block title %}HOME{% endblock %}
+{% block stylesheets %}
+<!-- Le styles --> 
+        <link href="{{ asset('bundles/ReaAcceuil/css/bootstrap-responsive.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %} 
+ <div width="250" height="260"><img src="{{ asset('bundles/iabsisvideotheque/img/img_1.jpg') }}" width="500" height="200" /></div>
+ 
+{% endblock %}
+
+{% block navbarmini %}
+{% endblock %}
+{% use 'LexemplaireBundle:Default:sidebar_Home.html.twig' %}
+

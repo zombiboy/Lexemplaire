@@ -1,0 +1,74 @@
+{% extends '::basepdf.html.twig' %}
+
+{% block body %}
+     
+
+     
+ <div id="hyper" > 
+        <div id="bandeau">
+            <h1 id="fact">**LA TERASSE** </h1>
+            <div id="blocnews"> N°cmd: {{ num }}
+            <br/>{{"now"|date('Y-m-d H:i:s') }}
+            </div>
+        </div>
+        <div id="contenu">
+            <div> 
+                <div id="tabA" >       
+                </div> 
+            </div>
+            <br/><br/>
+
+            <div id="tabB"> 
+                    <table id="maTable2">
+  <thead>
+    <tr>
+      <th>DESIGNATION</th>
+      <th>Qte x PRIX.U</th>
+      <th>MONTANT</th>
+    </tr>
+     <tr>
+           <td>---</td>
+    </tr>
+  </thead>
+  <tbody>
+     
+    {% for facture in factures %}
+            <tr>
+                <td>{{ facture.designation }}</td>
+                <td>{{ facture.quantite }} x {{ facture.prixu }}</td>
+                <td>{{ facture.montant }}</td>
+            </tr>
+    {% endfor %}
+
+    <tr>
+           <td>---</td>
+    </tr>
+     <tr>
+      <td>***TOTAL***</td>
+      <td>*** {{fac}} FCFA ***</td>      
+    </tr>
+ 
+  </tbody>
+</table>
+            </div> 
+                
+        </div>      
+        <div id="piedpage">
+            #soutienaufrangin<br/>
+            Contacts:71 25 92 26 / 76 86 49 60<br/><br/>
+
+
+        </div>
+        <h2 id="fact">MERCI DE VOTRE  </br>  FIDELITÉ </br></h2>
+        <div id="piedfact"></div> ..
+    </div>
+     
+    </div> 
+
+    
+          <a class="print" href="{{ path('facture_new', { 'id': commande.id }) }}">Imprimer</a>
+          <a href="{{ path('article_index') }}">Acceuil</a>
+    
+
+{% endblock %}
+{% use 'LexemplaireBundle:Default:sidebar_Home.html.twig' %}
